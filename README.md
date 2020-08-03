@@ -46,7 +46,7 @@ sqlite>
 
 Frontend 
 Frontend file - app.py 
-4 app routes 
+Flask  @app.routes 
 / - index.htmls 
 /org - org-info.html
 /private-facilities- private-facilites.html
