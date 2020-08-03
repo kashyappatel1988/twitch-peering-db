@@ -47,10 +47,10 @@ sqlite>
 Frontend 
 Frontend file - app.py 
 Flask  @app.routes 
-/ - index.htmls 
-/org - org-info.html
-/private-facilities- private-facilites.html
-/public-peering - public-peering.html
+1. / - index.htmls 
+2. /org - org-info.html
+3. /private-facilities- private-facilites.html
+4. /public-peering - public-peering.html
 
 
 ```
