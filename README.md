@@ -43,14 +43,15 @@ Create 3 tables of SQLITE3
 sqlite> .tables
 facilities      org_info        public_peering
 sqlite> 
-
+```
 ### Frontend 
+```
 Frontend file - app.py 
 Flask  @app.routes 
 1. / - index.htmls 
 2. /org - org-info.html
 3. /private-facilities- private-facilites.html
 4. /public-peering - public-peering.html
-
-
 ```
+
+
