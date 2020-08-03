@@ -20,7 +20,7 @@ make
 
 ```
 
-### HTML CSS IndexTemplates source 
+### HTML CSS Bootstrap Templates source 
 https://startbootstrap.com/themes/
 
 ## Application Flow 
