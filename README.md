@@ -27,7 +27,7 @@ https://startbootstrap.com/themes/
 https://www.peeringdb.com/
 
 ## Application Flow 
-#### Backend 
+### Backend 
 ```
 Backend file - Backend.py 
 API calls 
@@ -44,7 +44,7 @@ sqlite> .tables
 facilities      org_info        public_peering
 sqlite> 
 
-#### Frontend 
+### Frontend 
 Frontend file - app.py 
 Flask  @app.routes 
 1. / - index.htmls 
