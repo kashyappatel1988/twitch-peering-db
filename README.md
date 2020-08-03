@@ -26,7 +26,7 @@ https://startbootstrap.com/themes/
 ## Application Flow 
 ### Backend 
 ```
-Backend.py 
+Backend file - Backend.py 
 API calls 
 1. API call to https://peeringdb.com/api/net/1956 
 2. another API call for Org info  
@@ -42,7 +42,7 @@ facilities      org_info        public_peering
 sqlite> 
 
 Frontend 
-app.py 
+Frontend file - app.py 
 4 app routes 
 / - index.htmls 
 /org - org-info.html
