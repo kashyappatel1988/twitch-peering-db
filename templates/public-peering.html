@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<title>Public Peering - Twitch</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./static/assets/img/favicon.ico" />
+
+<head>
+    <link href="./static/css/table1.css" rel="stylesheet" />
+    <h1>Public Peering Exchange Points for Twitch</h1>
+</head>
+<table class="blueTable">
+<thead>
+<!--Creating tables column names -->
+<tr>
+    {% for column_names in output[0].keys()%}
+    <th>{{column_names}}</th>
+    {% endfor %}
+</tr>
+</thead>
+    <tbody>
+    <!--    Adding data from dict values -->
+    {% for dict in output%}
+    <tr>
+    {%for key,value in dict.items() %}
+<td>{{value}}</td>
+    {%endfor%}
+    </tr>
+    {%endfor%}
+    </tbody>
+</table>
+

@@ -1,0 +1,22 @@
+<title>Twitch Peering DB</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./static/assets/img/favicon.ico" />
+<head>
+    <link href="./static/css/table.css" rel="stylesheet" />
+    <h1>Twitch Organization Information</h1>
+</head>
+<!doctype html>
+<html lang="en">
+<table class="blueTable">
+<tbody>
+{% for element in output%}
+    {% for key,value in element.items() %}
+    <tr>
+    <td>{{key}}</td><td>{{value}}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+    {% endfor %}
+</table>
+</body>
+</html>
