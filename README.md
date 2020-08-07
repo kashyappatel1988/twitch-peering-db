@@ -3,6 +3,8 @@
 ### Install Requirements
 ```pip3 install -r requirements.txt```
 
+### Public URL 
+http://www.twitchpeerdb.com/
 ### Start serverVia CLI 
 ```
 make
@@ -52,6 +54,7 @@ Flask  @app.routes
 2. /org - org-info.html
 3. /private-facilities- private-facilites.html
 4. /public-peering - public-peering.html
+5. /summary - summary.html
 ```
 
 
