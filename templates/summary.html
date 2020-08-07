@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<title>Executive Summary</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./static/assets/img/favicon.ico" />
+
+<head>
+    <link href="./static/css/table.css" rel="stylesheet" />
+    <h1>Executive Summary</h1>
+</head>
+
+<html lang="en">
+<table class="blueTable">
+    <tbody><tr><td>Total Aggregate Speed</td><td>{{output[0]['0'][0]['sum(speed)']//1000}}G</td></tr></tbody>
+    <tbody><tr><td>Total Number of Unique Public Peering</td><td>{{output[1]['1']}}</td></tr></tbody>
+    <tbody><tr><td>Total Number of Unique Private Peering</td><td>{{output[2]['2']}}</td></tr></tbody>
+    <tbody><tr><td>Total Number of Peering</td><td>{{output[2]['2'] + output[1]['1'] }}</td></tr></tbody>
+
+</table>
+</body>
+</html>

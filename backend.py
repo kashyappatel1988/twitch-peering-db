@@ -4,6 +4,7 @@ import json
 import urllib3
 import pandas as pd
 import sqlite3
+from pprint import pprint
 
 urllib3.disable_warnings()
 
@@ -15,12 +16,16 @@ def parser(url_name):
     return op
 
 
-def listtosqlite3(list, dbname, tablename, columnstodrop=[]):
+def listtosqlite3(list, dbname, tablename,sortbycolumn=[],columnindex=[],columnstodrop=[]):
     conn = sqlite3.connect(dbname)
     df1 = pd.DataFrame(list)
     if columnstodrop: df1 = df1.drop(columns=columnstodrop)
+    if columnindex:df1 = df1[columnindex]
+    if sortbycolumn:df1.sort_values(by=sortbycolumn,inplace=True)
+    if sortbycolumn:df1.reset_index(drop=True,inplace=True)
+    # if columnindex: df1 = df1.columnsindex(columnindex,dtype='object')
     df1.index= df1.index+1
-    df1.to_sql(tablename, conn, if_exists='replace')
+    df1.to_sql(tablename, conn,if_exists='replace')
     df1.to_csv(f'data/{tablename}.csv', index_label='index', encoding='utf-8')
 
 
@@ -46,8 +51,9 @@ if __name__ == "__main__":
     org_info = (output1['data'][0]['net_set'])  # <class 'list'>
     listtosqlite3(public_peering_ex,
                   'data/twitch-peering-db',
-                  'public_peering',
-                  columnstodrop=['ix_id', 'id', 'ixlan_id', 'is_rs_peer', 'notes', 'notes'])
+                  'public_peering',sortbycolumn=['name'],
+                  columnstodrop=['ix_id', 'id', 'ixlan_id', 'is_rs_peer', 'notes', 'notes','operational'],
+                  columnindex=['name','speed','ipaddr4','ipaddr6','asn','updated'])
     listtosqlite3(facilities,
                   'data/twitch-peering-db',
                   'facilities', columnstodrop=['id', 'fac_id','status'])
